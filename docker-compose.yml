@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  smsbrandname_web:
+    container_name: smsbrandname_web
+    tty: true
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - "10006:10006"
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - PORT=10006
+      - HOST=0.0.0.0
